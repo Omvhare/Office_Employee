@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .login-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+    }
+
+    .form-section {
+      padding: 20px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .err_message {
+      color: red;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .login-card {
+        flex-direction: row;
+      }
+
+      .image-section, .form-section {
+        width: 50%;
+      }
+
+      .image-section img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="login-card">
+      <div class="image-section">
+        <img src="{% static 'assets/Team.jpg' %}" alt="Team Image" />
+      </div>
+      <div class="form-section">
+        <h2>LOGIN</h2>
+        <form method="post">
+          {% csrf_token %}
+          <label for="id">Id</label>
+          <input type="text" name="id" required>
+
+          <label for="password">Password</label>
+          <input type="password" name="password" required>
+
+          <input type="submit" value="Login" />
+          <a href="signup">New Employee</a>
+
+          <div class="err_message">
+            {% for msg in messages %}
+              {{ msg }}
+            {% endfor %}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
