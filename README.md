@@ -41,6 +41,46 @@ Employee Management System built in a Python Framework Django and PostgreSQL as 
     ```
 - Hola, It's running !!
 
+- ## 🖼️ Screenshots
+
+### 🔹 Login Page
+![Login](screenshots/Login.png)
+
+### 🔹 User Registration
+![Registration](screenshots/Registrations.png)
+
+### 🔹 Admin Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### 🔹 Admin – Employee Management
+![Admin Employee](screenshots/Admin%20Employee.png)
+
+### 🔹 Admin – Attendance View
+![Admin Attendance](screenshots/Admin%20Attendance.png)
+
+### 🔹 Admin – Notices
+![Admin Notices](screenshots/Admin%20Notices.png)
+
+### 🔹 Assign Work to Employees
+![Assign Work](screenshots/Assign%20Work.png)
+
+### 🔹 View Notice Board (Employee)
+![Notice](screenshots/Notice.png)
+
+### 🔹 Employee – Make a Request
+![Make Request](screenshots/Make%20Request.png)
+
+### 🔹 Employee – Your Attendance
+![Your Attendance](screenshots/Your%20Attendance.png)
+
+### 🔹 Employee – Assigned Work View
+![Your Assigned Work](screenshots/Your%20Assigned%20Work.png)
+
+### 🔹 Employee – My Work
+![My Work](screenshots/My%20Work.png)
+
+---
+
 
 
 >If you found this useful, make sure to give it a star 🌟
