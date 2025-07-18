@@ -31,7 +31,7 @@ Employee Management System built in a Python Framework Django and PostgreSQL as 
     ```python
     python manage.py makemigrations
     ```
-- Migrate the App, run the command
+- Migrate the App, run the command 
     ```python
     python manage.py migrate
     ```
